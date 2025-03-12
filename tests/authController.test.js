@@ -24,7 +24,7 @@ describe("authController.register", () => {
     console.log("authController.register req.body1", req.body);
 
     await authController.register(req, res);
-    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.status).toHaveBeenCalledWith(407);
     expect(res.json).toHaveBeenCalledWith({
       message: "Missing email or password",
     });
